@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh sách các lớp</title>
+  <link rel="stylesheet" href="/css/class.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Danh sách các lớp</h1>
+    <div class="filters">
+      <select id="searchType" name="searchType">
+        <option value="all" selected>Tất cả</option>
+        <option value="grade">Khối lớp</option>
+        <option value="subject">Môn học</option>
+        <option value="teacher">Giáo viên</option>
+      </select>
+      <select id="searchOptions" name="searchOptions" style="display: none;"></select>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>Tên lớp</th>
+          <th>Môn học</th>
+          <th>Mã lớp</th>
+          <th>Khối lớp</th>
+          <th>Giáo viên</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody id="classList"></tbody>
+    </table>
+  </div>
+  <div id="topicsModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <div id="topicsContainer"></div>
+    </div>
+  </div>
+  <script src="/js/class.js"></script>
+</body>
+</html>

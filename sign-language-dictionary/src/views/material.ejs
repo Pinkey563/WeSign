@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materials</title>
+  <link rel="stylesheet" href="/css/material.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Học liệu cho môn học <%= subject %></h1>
+    <div class="center-div">
+      <div id="materialContent" class="left-div">
+        <!-- Content will be injected here by material.js -->
+      </div>
+      <div id="materialVideo" class="right-div">
+        <!-- Video will be injected here by material.js -->
+      </div>
+    </div>
+    <div class="navigation-buttons">
+      <button id="prevMaterial">Previous</button>
+      <button id="nextMaterial">Next</button>
+      <button id="backToClassList">Back to Class List</button>
+    </div>
+    <script id="materialsData" type="application/json"><%- JSON.stringify(materials) %></script>
+  </div>
+  <script src="/js/material.js"></script>
+</body>
+</html>

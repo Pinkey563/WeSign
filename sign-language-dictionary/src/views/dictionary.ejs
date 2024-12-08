@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Language Dictionary</title>
+  <link rel="stylesheet" href="/css/dictionary.css">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval';">
+</head>
+<body>
+  <div class="container">
+    <h1>Danh sách từ điển học liệu</h1>
+    <div class="filters">
+      <select id="typeFilter" name="searchType" placeholder="Loại từ vựng">
+        <option value="all" selected>Tất cả</option> <!-- Đặt giá trị mặc định thành 'all' -->
+        <option value="word">Từ</option>
+        <option value="sentence">Câu</option>
+        <option value="paragraph">Đoạn</option>
+      </select>
+      <input type="text" id="searchBox" name="word" placeholder="Tìm kiếm từ vựng">
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th><input type="checkbox"></th>
+          <th>Từ vựng</th>
+          <th>Loại từ vựng</th>
+          <th>Ảnh minh họa</th>
+          <th>Video minh họa</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody id="resultsBody">
+        <!-- Populated dynamically -->
+      </tbody>
+    </table>
+  </div>
+  <!-- Inline JavaScript -->
+  <script src="/js/dictionary.js"></script>
+</body>
+</html>
